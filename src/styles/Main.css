@@ -103,6 +103,12 @@ hr {
   border-radius: 10px;
 }
 
+.Details {
+  display: flex;
+  margin: 0 20rem;
+  justify-content: space-between;
+}
+
 /* mobile styles */
 @media screen and (max-width: 420px) {
 
