@@ -1,14 +1,16 @@
-import React from 'react';
-import '../styles/Main.css';
+import React, { Component } from "react";
+import "../styles/Main.css";
+import Saver from "./Saver";
 
-function App() {
-  return (
-    <div className="Container">
-      <h1 className="Title">
-        Save important dates for later
-      </h1>
-    </div>
-  );
+export class Main extends Component {
+  render() {
+    return (
+      <div className="Container">
+        <h1 className="Title">Look how long until</h1>
+        <Saver/>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default Main;
