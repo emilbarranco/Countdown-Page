@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 export class Saver extends Component {
+  // State declarations and super call
   constructor(props) {
     super(props);
     this.state = {
@@ -11,6 +12,7 @@ export class Saver extends Component {
     };
   }
 
+  // Lifecycle Hooks to Update UI & Calling method with prop as argument
   componentWillMount() {
     this.CalculateDate(this.props.dateToSave);
   }
@@ -19,13 +21,17 @@ export class Saver extends Component {
     setInterval(() => this.CalculateDate(this.props.dateToSave), 1000);
   }
 
+  // Time calculation method taking user input (prop) as argument
   CalculateDate(dateToSave) {
+    // Parsing the input alongside the current Date() for calculation
     const thisDate = Date.parse(dateToSave) - Date.parse(new Date());
+    // Calculations Formulas
     const days = Math.floor(thisDate / (1000 * 60 * 60 * 24));
     const hours = Math.floor((thisDate / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((thisDate / 1000 / 60) % 60);
     const seconds = Math.floor((thisDate / 1000) % 60);
 
+    // Updating states after calculations
     this.setState({
       days,
       hours,
@@ -34,8 +40,9 @@ export class Saver extends Component {
     });
   }
 
+  // Adding zeros to numbers below 10 for visual improvement
   Zeros(num) {
-    return num < 10 ? '0' + num : num
+    return num < 10 ? "0" + num : num;
   }
 
   render() {

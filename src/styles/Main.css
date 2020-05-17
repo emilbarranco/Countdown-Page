@@ -2,7 +2,13 @@
 
     ~ Developed By: Emil Barranco 
     ~ Table of Content:
-        - Container
+        - Variables
+        - Fonts
+        - Global Styling
+        - Header
+        - Form
+        - Results
+        - Media Queries
 
 * ################################### */
 
@@ -46,6 +52,8 @@ body {
   height: 100%;
 }
 
+/* Header Styling */
+
 h1 {
   font-size: 3.5rem;
   color: #fff;
@@ -60,6 +68,8 @@ hr {
   width: 200px;
   border: 1px solid var(--main);
 }
+
+/* Form Styling */
 
 .Input {
   padding: 1.1rem;
@@ -84,6 +94,8 @@ hr {
 .helper {
   color: #f3f3f3;
 }
+
+/* Results Styling */
 
 .time {
   background-color: var(--main);
@@ -110,8 +122,8 @@ hr {
 }
 
 /* mobile styles */
-@media screen and (max-width: 420px) {
 
+@media screen and (max-width: 420px) {
   .Title {
     margin: 1rem;
   }
